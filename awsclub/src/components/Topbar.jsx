@@ -19,11 +19,10 @@ export default function Topbar() {
         {/* Navigation Links */}
         <nav className="flex items-center gap-8 font-medium text-gray-300">
           <a href="/" className="hover:text-[#FF9900] transition-colors">Home</a>
-          <a href="/about" className="hover:text-[#FF9900] transition-colors">About</a>
           <a href="/projects" className="hover:text-[#FF9900] transition-colors">Projects</a>
           <a href="/events" className="hover:text-[#FF9900] transition-colors">Events</a>
-          <a href="/resources" className="hover:text-[#FF9900] transition-colors">Resources</a>
-          <a href="/team" className="hover:text-[#FF9900] transition-colors">Team</a>
+          <a href="/projects" className="hover:text-[#FF9900] transition-colors">Projects</a>
+          <a href="/members" className="hover:text-[#FF9900] transition-colors">Team</a>
           <a href="/contact" className="hover:text-[#FF9900] transition-colors">Contact</a>
         </nav>
 
