@@ -29,7 +29,9 @@ export default function Topbar() {
         {/* Join Button */}
         <div>
           <a
-            href="/join"
+            href="https://chat.whatsapp.com/BFQRlc3OKwl50apnCc94v3"
+            rel="noopener noreferrer"
+            target="_blank"
             className="bg-[#FF9900] text-black px-5 py-2 rounded-lg font-semibold hover:bg-[#e68a00] transition-colors"
           >
             JOIN

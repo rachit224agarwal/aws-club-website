@@ -44,11 +44,26 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-gray-200 py-5 text-center text-sm text-gray-500">
-        Developed with <span className="text-red-500">❤️</span> by{" "}
-        <a href="#" className="text-blue-600 hover:underline">Rachit Agarwal</a> and{" "}
-        <a href="#" className="text-blue-600 hover:underline">Raunak Kushwaha</a>
-      </div>
+<div className="border-t border-gray-200 py-5 text-center text-sm text-gray-500">
+  Developed with <span className="text-red-500">❤️</span> by{" "}
+  <a
+    href="https://www.linkedin.com/in/rachit-agarwal-a52924282/" // replace with your LinkedIn link
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:underline"
+  >
+    Rachit Agarwal
+  </a>{" "}
+  and{" "}
+  <a
+    href="https://www.linkedin.com/in/raunak-kushwaha-1b22372a8/" // replace with your LinkedIn link
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:underline"
+  >
+    Raunak Kushwaha
+  </a>
+</div>
     </footer>
   )
 }
