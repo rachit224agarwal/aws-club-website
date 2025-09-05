@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import awslogo from "../assets/awslogo.png";
+import Counter from "../components/Counter";
+import VisionObjective from "../components/VisionObjective";
+import visionImage from "../assets/clubLogo.png";
 
 const words = [
   "Cloud",
@@ -90,29 +93,30 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-16 flex flex-col justify-center items-center px-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#FF9900] mb-10">
-          Our Impact
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <h3 className="text-4xl font-bold text-[#FF9900]">20+</h3>
-            <p className="text-gray-300 mt-2">Active Members</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold text-[#FF9900]">20+</h3>
-            <p className="text-gray-300 mt-2">Workshops Hosted</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold text-[#FF9900]">10+</h3>
-            <p className="text-gray-300 mt-2">AWS Certifications</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold text-[#FF9900]">10+</h3>
-            <p className="text-gray-300 mt-2">Projects</p>
-          </div>
-        </div>
-      </section>
+     <section className="relative py-16 flex flex-col justify-center items-center px-6 max-w-7xl mx-auto">
+  <h2 className="text-3xl md:text-4xl font-bold text-[#FF9900] mb-10">
+    Our Impact
+  </h2>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div>
+      <Counter target={20} />
+      <p className="text-gray-300 mt-2">Active Members</p>
+    </div>
+    <div>
+      <Counter target={20} />
+      <p className="text-gray-300 mt-2">Workshops Hosted</p>
+    </div>
+    <div>
+      <Counter target={10} />
+      <p className="text-gray-300 mt-2">AWS Certifications</p>
+    </div>
+    <div>
+      <Counter target={7} />
+      <p className="text-gray-300 mt-2">Ongoing Projects</p>
+    </div>
+  </div>
+</section>
+
 
       {/* Why Join Us Section */}
       <section className="relative py-16 flex flex-col justify-center items-center px-6 max-w-7xl mx-auto">
@@ -142,6 +146,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+        <VisionObjective imageSrc={visionImage} />
     </main>
   );
 }
