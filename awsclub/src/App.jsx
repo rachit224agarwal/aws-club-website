@@ -1,23 +1,34 @@
 // src/App.jsx
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Topbar from "./components/Topbar";
-import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Events from "./pages/Events";
+import Members from "./pages/Members";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="bg-[#232F3E] text-white min-h-screen flex flex-col">
-      {/* Navbar */}
-      <Topbar />
+      <div className="bg-[#232F3E] text-white min-h-screen flex flex-col">
+        {/* Navbar */}
+        <Topbar />
 
-      {/* Main content - expands to fill space */}
-      <main className="flex-grow">
-        <Home />
-      </main>
+        {/* Main content */}
+        <main className="flex-grow pt-16"> 
+          <Routes>
+            <Route path="/" Component={Home} />
+            <Route path="/projects" Component={Projects} />
+            <Route path="/events" Component={Events} />
+            <Route path="/members" Component={Members} />
+            <Route path="/contact" Component={Contact} />
+          </Routes>
+        </main>
 
-      {/* Footer at bottom */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
   );
 }
 

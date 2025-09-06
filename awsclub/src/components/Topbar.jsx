@@ -1,5 +1,6 @@
 // src/components/Topbar.jsx
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import clubLogo from "../assets/club.png";
 
 export default function Topbar() {
@@ -18,12 +19,11 @@ export default function Topbar() {
 
         {/* Navigation Links */}
         <nav className="flex items-center gap-8 font-medium text-gray-300">
-          <a href="/" className="hover:text-[#FF9900] transition-colors">Home</a>
-          <a href="/projects" className="hover:text-[#FF9900] transition-colors">Projects</a>
-          <a href="/events" className="hover:text-[#FF9900] transition-colors">Events</a>
-          <a href="/projects" className="hover:text-[#FF9900] transition-colors">Projects</a>
-          <a href="/members" className="hover:text-[#FF9900] transition-colors">Team</a>
-          <a href="/contact" className="hover:text-[#FF9900] transition-colors">Contact</a>
+          <NavLink to="/" className={({ isActive }) => isActive ? "text-[#FF9900]" : "hover:text-[#FF9900] transition-colors"}>Home</NavLink>
+          <NavLink to="/projects" className={({ isActive }) => isActive ? "text-[#FF9900]" : "hover:text-[#FF9900] transition-colors"}>Projects</NavLink>
+          <NavLink to="/events" className={({ isActive }) => isActive ? "text-[#FF9900]" : "hover:text-[#FF9900] transition-colors"}>Events</NavLink>
+          <NavLink to="/members" className={({ isActive }) => isActive ? "text-[#FF9900]" : "hover:text-[#FF9900] transition-colors"}>Team</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "text-[#FF9900]" : "hover:text-[#FF9900] transition-colors"}>Contact</NavLink>
         </nav>
 
         {/* Join Button */}
@@ -41,4 +41,3 @@ export default function Topbar() {
     </header>
   );
 }
-
