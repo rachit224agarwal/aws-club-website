@@ -14,7 +14,7 @@ import ghanatva from "../assets/people/ghanatva.jpg";
 
 // Core Team Data
 const coreTeam = [
-  { name: "Ghanatva Thakaran", role: "Founder & Mentor", image: ghanatva, linkedin: "https://www.linkedin.com/in/ghanatava/", github: "#" },
+  { name: "Ghanatva Thakaran", role: "Founder & Mentor", image: ghanatva, linkedin: "https://www.linkedin.com/in/ghanatava/", github: "https://github.com/ghanatava" },
   { name: "Prapti Sharma", role: "Founder & Mentor", image: prapti, linkedin: "https://www.linkedin.com/in/prapti-sharma-796080257/", github: "https://github.com/praptisharma28" },
   { name: "Kunal Thalautiya", role: "President", image: kunal, linkedin: "https://www.linkedin.com/in/kunal-thalautiya-238a17242/", github: "https://github.com/Kunalkthalautiya" },
   { name: "Pravira Shukla", role: "Vice President", image: p, linkedin: "https://www.linkedin.com/in/pravirashukla/", github: "#" },

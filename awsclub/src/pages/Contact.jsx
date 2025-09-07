@@ -40,10 +40,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_mfahpjf",
-        "template_kzdliop",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "16ulAKw90ij60Le4L"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -119,7 +119,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center space-x-3 mb-6">
               <Mail className="text-[#FF9900]" />
-              <p>Test@gmail.com</p>
+              <p>awscloudclub1kiet@gmail.com</p>
             </div>
             <p className="font-bold text-lg mb-3">Follow us</p>
             <div className="flex space-x-4 text-xl">
