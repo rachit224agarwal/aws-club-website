@@ -9,10 +9,9 @@ import event6 from "../assets/events/event6.jpg";
 import event7 from "../assets/events/event7.jpg";
 import event8 from "../assets/events/event8.jpg";
 import event9 from "../assets/events/event9.jpg";
-import event10 from "../assets/events/event10.jpg";
-import event11 from "../assets/events/event11.jpg";
 
-const events = [event11, event10, event3, event4, event5, event6, event7, event8, event9, event2, event1];
+
+const events = [event3, event4, event5, event6, event7, event8, event9, event2, event1];
 
 export default function Events() {
   return (
