@@ -25,7 +25,7 @@ export default function Home() {
   const delayBetweenWords = 1000;
 
   useEffect(() => {
-    const word = words[currentWordIndex].slice(1); // skip 1st alphabet
+    const word = words[currentWordIndex].slice(1); 
     let typingTimeout;
 
     if (!isDeleting && displayedText.length < word.length) {
