@@ -1,15 +1,26 @@
+// src/pages/Members.jsx
 import React from "react";
+import { motion } from "framer-motion";
 import MemberCard from "../components/MemberCard";
+
+// Import images
+import raunak from "../assets/people/raunak.jpg";
+import p from "../assets/people/p.jpg";
+import kunal from "../assets/people/kunal.jpg";
+import rachit from "../assets/people/rachit.jpg";
+import prapti from "../assets/people/prapti.jpg";
+import rishi from "../assets/people/rishi.jpg";
+import ghanatva from "../assets/people/ghanatva.jpg";
 
 // Core Team Data
 const coreTeam = [
-  { name: "John Doe", role: "President", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Jane Smith", role: "Vice President", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Alex Johnson", role: "Technical Lead", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Emily Davis", role: "Event Coordinator", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "David Lee", role: "Design Lead", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Sophia Brown", role: "PR Head", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Daniel Wilson", role: "Treasurer", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Raunak Kushwaha", role: "President", image: raunak, linkedin: "#", github: "#" },
+  { name: "P", role: "Vice President", image: p, linkedin: "#", github: "#" },
+  { name: "Kunal", role: "Technical Lead", image: kunal, linkedin: "#", github: "#" },
+  { name: "Rachit", role: "Event Coordinator", image: rachit, linkedin: "#", github: "#" },
+  { name: "Prapti", role: "Design Lead", image: prapti, linkedin: "#", github: "#" },
+  { name: "Rishi", role: "PR Head", image: rishi, linkedin: "#", github: "#" },
+  { name: "Ghanatva", role: "Treasurer", image: ghanatva, linkedin: "#", github: "#" },
 ];
 
 // Team Members Data
@@ -25,31 +36,51 @@ const teamMembers = [
 
 export default function Members() {
   return (
-    <main className="relative w-full min-h-screen bg-gray-900 text-white overflow-hidden pt-24">
-      {/* Neon Background UI */}
-      <div className="absolute inset-0 -z-10">
-        <div className="w-[700px] h-[700px] bg-yellow-500 opacity-20 rounded-full blur-[200px] absolute top-[-200px] left-[-200px] animate-pulse"></div>
-        <div className="w-[600px] h-[600px] bg-blue-500 opacity-20 rounded-full blur-[200px] absolute bottom-[-200px] right-[-200px] animate-pulse"></div>
+    <main className="relative w-full min-h-screen bg-gray-900 text-white overflow-hidden pt-10">
+      {/* Neon Background Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="w-[700px] h-[700px] bg-yellow-500 opacity-30 rounded-full blur-[250px] absolute top-[-200px] left-[-200px]"></div>
+        <div className="w-[600px] h-[600px] bg-blue-500 opacity-30 rounded-full blur-[250px] absolute bottom-[-200px] right-[-200px]"></div>
       </div>
 
       <section className="relative py-16 max-w-7xl mx-auto px-6">
         {/* Core Team Section */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#FF9900] text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#FF9900] text-center mb-16">
           Core Team
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-16">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14 mb-20">
           {coreTeam.map((member, index) => (
-            <MemberCard key={index} {...member} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <MemberCard {...member} />
+            </motion.div>
           ))}
         </div>
 
         {/* Team Members Section */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#FF9900] text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#FF9900] text-center mb-16">
           Team Members
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14">
           {teamMembers.map((member, index) => (
-            <MemberCard key={index} {...member} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <MemberCard {...member} />
+            </motion.div>
           ))}
         </div>
       </section>
