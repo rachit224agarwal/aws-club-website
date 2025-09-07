@@ -119,7 +119,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center space-x-3 mb-6">
               <Mail className="text-[#FF9900]" />
-              <p>awscloudclub1kiet@gmail.com</p>
+              <p>awscloudclubkiet@gmail.com</p>
             </div>
             <p className="font-bold text-lg mb-3">Follow us</p>
             <div className="flex space-x-4 text-xl">

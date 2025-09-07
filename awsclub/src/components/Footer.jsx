@@ -25,10 +25,10 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="mailto:awscloudclub1kiet@gmail.com"
+                href="mailto:awscloudclubkiet@gmail.com"
                 className="hover:text-[#FF9900] transition"
               >
-                awscloudclub1kiet@gmail.com
+                awscloudclubkiet@gmail.com
               </a>
             </li>
           </ul>
