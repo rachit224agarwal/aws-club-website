@@ -14,24 +14,24 @@ import ghanatva from "../assets/people/ghanatva.jpg";
 
 // Core Team Data
 const coreTeam = [
-  { name: "Raunak Kushwaha", role: "President", image: raunak, linkedin: "#", github: "#" },
-  { name: "P", role: "Vice President", image: p, linkedin: "#", github: "#" },
-  { name: "Kunal", role: "Technical Lead", image: kunal, linkedin: "#", github: "#" },
-  { name: "Rachit", role: "Event Coordinator", image: rachit, linkedin: "#", github: "#" },
-  { name: "Prapti", role: "Design Lead", image: prapti, linkedin: "#", github: "#" },
-  { name: "Rishi", role: "PR Head", image: rishi, linkedin: "#", github: "#" },
-  { name: "Ghanatva", role: "Treasurer", image: ghanatva, linkedin: "#", github: "#" },
+  { name: "Ghanatva Thakaran", role: "Founder & Mentor", image: ghanatva, linkedin: "https://www.linkedin.com/in/ghanatava/", github: "#" },
+  { name: "Prapti Sharma", role: "Founder & Mentor", image: prapti, linkedin: "https://www.linkedin.com/in/prapti-sharma-796080257/", github: "https://github.com/praptisharma28" },
+  { name: "Kunal Thalautiya", role: "President", image: kunal, linkedin: "https://www.linkedin.com/in/kunal-thalautiya-238a17242/", github: "https://github.com/Kunalkthalautiya" },
+  { name: "Pravira Shukla", role: "Vice President", image: p, linkedin: "https://www.linkedin.com/in/pravirashukla/", github: "#" },
+  { name: "Rishi Raman Sinha", role: "Technical Lead", image: rishi, linkedin: "https://www.linkedin.com/in/rishi-raman-sinha-1714742a2/", github: "https://github.com/rishiraman27" },
+  { name: "Raunak Kushwaha", role: "Operation Lead", image: raunak, linkedin: "https://www.linkedin.com/in/raunak-kushwaha-1b22372a8/", github: "https://github.com/Raunakushwa" },
+  { name: "Rachit Agarwal", role: "Community Manager", image: rachit, linkedin: "https://www.linkedin.com/in/rachit-agarwal-a52924282/", github: "https://github.com/rachit224agarwal" },
 ];
 
 // Team Members Data
 const teamMembers = [
-  { name: "Chris Taylor", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Olivia Harris", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Ethan Clark", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Sophia Green", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Benjamin King", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Lily Adams", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Matthew Scott", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Subrat Dwivedi ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Amrit Seth", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Ayush Rao Chaudhary ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Sugandh Garg ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Shreya Baranwal", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Harshit Singh Patel", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Ashutosh shukla", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
 ];
 
 export default function Members() {

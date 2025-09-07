@@ -103,7 +103,7 @@ export default function Home() {
       <p className="text-gray-300 mt-2">Active Members</p>
     </div>
     <div>
-      <Counter target={20} />
+      <Counter target={30} />
       <p className="text-gray-300 mt-2">Workshops Hosted</p>
     </div>
     <div>
