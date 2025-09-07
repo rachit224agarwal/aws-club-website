@@ -22,3 +22,21 @@ body {
 .animate-gradient {
   animation: gradient 15s ease infinite;
 }
+@keyframes bubble {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-20px, -40px) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(20px, -80px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.animate-bubble {
+  animation: bubble 2s linear infinite;
+}
