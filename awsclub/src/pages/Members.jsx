@@ -17,7 +17,7 @@ const coreTeam = [
   { name: "Ghanatva Thakaran", role: "Mentor", image: ghanatva, linkedin: "https://www.linkedin.com/in/ghanatava/", github: "https://github.com/ghanatava" },
   { name: "Prapti Sharma", role: "Founder & Mentor", image: prapti, linkedin: "https://www.linkedin.com/in/prapti-sharma-796080257/", github: "https://github.com/praptisharma28" },
   { name: "Kunal Thalautiya", role: "Founder & President", image: kunal, linkedin: "https://www.linkedin.com/in/kunal-thalautiya-238a17242/", github: "https://github.com/Kunalkthalautiya" },
-  { name: "Pravira Shukla", role: "Vice President", image: p, linkedin: "https://www.linkedin.com/in/pravirashukla/", github: "#" },
+  { name: "Pravira Shukla", role: "Vice President", image: p, linkedin: "https://www.linkedin.com/in/pravirashukla/", github: "https://github.com/pravirashukla" },
   { name: "Rishi Raman Sinha", role: "Technical Lead", image: rishi, linkedin: "https://www.linkedin.com/in/rishi-raman-sinha-1714742a2/", github: "https://github.com/rishiraman27" },
   { name: "Raunak Kushwaha", role: "Operation Lead", image: raunak, linkedin: "https://www.linkedin.com/in/raunak-kushwaha-1b22372a8/", github: "https://github.com/Raunakushwa" },
   { name: "Rachit Agarwal", role: "Community Manager", image: rachit, linkedin: "https://www.linkedin.com/in/rachit-agarwal-a52924282/", github: "https://github.com/rachit224agarwal" },
@@ -25,13 +25,14 @@ const coreTeam = [
 
 // Team Members Data
 const teamMembers = [
-  { name: "Subrat Dwivedi ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Amrit Seth", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Ayush Rao Chaudhary ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Sugandh Garg ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Shreya Baranwal", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Harshit Singh Patel", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
-  { name: "Ashutosh shukla", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Subrat Dwivedi ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/subrat-dwivedi-977144328/", github: "https://github.com/Subrat-Dwivedi-22" },
+  { name: "Ashutosh shukla", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/ashutosh-shukla-4b8363322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/Shukla2341" },
+  { name: "Ayush Rao Chaudhary ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/ask99ayush/", github: "https://github.com/Ask99Ayush" },
+  { name: "Harshit Singh Patel", role: "Member", image: "https://via.placeholder.com/200", linkedin: "www.linkedin.com/in/harshit-patel01", github: "github.com/Harshit-Patel01" },
+  { name: "Shreya Baranwal", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/shreya-baranwal-1103802a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/shreya229508" },
+  { name: "Amrit Seth", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/amrit-seth-702520315?", github: "https://github.com/amritseth" },
+  { name: "Rishab Kumar ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Sugandh Garg ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/sugandh-garg-14a51b204?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/sugandhgarg03" },
 ];
 
 export default function Members() {
