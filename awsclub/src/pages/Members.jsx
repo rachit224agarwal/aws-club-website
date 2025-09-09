@@ -31,7 +31,7 @@ const teamMembers = [
   { name: "Harshit Singh Patel", role: "Member", image: "https://via.placeholder.com/200", linkedin: "www.linkedin.com/in/harshit-patel01", github: "github.com/Harshit-Patel01" },
   { name: "Shreya Baranwal", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/shreya-baranwal-1103802a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/shreya229508" },
   { name: "Amrit Seth", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/amrit-seth-702520315?", github: "https://github.com/amritseth" },
-  { name: "Rishab Kumar ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "#", github: "#" },
+  { name: "Rishabh Kumar ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/rishabh-kumar-a072392aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/Rishabh-kumar45" },
   { name: "Sugandh Garg ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/sugandh-garg-14a51b204?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/sugandhgarg03" },
 ];
 
