@@ -11,7 +11,14 @@ import rachit from "../assets/people/rachit.jpg";
 import prapti from "../assets/people/prapti.jpg";
 import rishi from "../assets/people/rishi.jpg";
 import ghanatva from "../assets/people/ghanatva.jpg";
-
+import amrit from "../assets/people/amrit.jpg";
+import ayush from "../assets/people/ayush.jpg";
+import ashutosh from "../assets/people/ashutosh.jpg";
+import shreya from "../assets/people/shreya.jpg";
+import subrat from "../assets/people/subrat.jpg";
+import rishabh from "../assets/people/rishabh.jpg";
+import sugandh from "../assets/people/sugandh.jpg";
+import harshit from "../assets/people/harshit.jpg";
 // Core Team Data
 const coreTeam = [
   { name: "Ghanatva Thakaran", role: "Mentor", image: ghanatva, linkedin: "https://www.linkedin.com/in/ghanatava/", github: "https://github.com/ghanatava" },
@@ -25,14 +32,14 @@ const coreTeam = [
 
 // Team Members Data
 const teamMembers = [
-  { name: "Subrat Dwivedi ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/subrat-dwivedi-977144328/", github: "https://github.com/Subrat-Dwivedi-22" },
-  { name: "Ashutosh shukla", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/ashutosh-shukla-4b8363322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/Shukla2341" },
-  { name: "Ayush Rao Chaudhary ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/ask99ayush/", github: "https://github.com/Ask99Ayush" },
-  { name: "Harshit Singh Patel", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/harshit-patel01", github: "https://github.com/Harshit-Patel01" },
-  { name: "Shreya Baranwal", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/shreya-baranwal-1103802a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/shreya229508" },
-  { name: "Amrit Seth", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/amrit-seth-702520315?", github: "https://github.com/amritseth" },
-  { name: "Rishabh Kumar ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/rishabh-kumar-a072392aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/Rishabh-kumar45" },
-  { name: "Sugandh Garg ", role: "Member", image: "https://via.placeholder.com/200", linkedin: "https://www.linkedin.com/in/sugandh-garg-14a51b204?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/sugandhgarg03" },
+  { name: "Subrat Dwivedi ", role: "Member", image: subrat, linkedin: "https://www.linkedin.com/in/subrat-dwivedi-977144328/", github: "https://github.com/Subrat-Dwivedi-22" },
+  { name: "Ashutosh shukla", role: "Member", image: ashutosh, linkedin: "https://www.linkedin.com/in/ashutosh-shukla-4b8363322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/Shukla2341" },
+  { name: "Ayush Rao Chaudhary ", role: "Member", image: ayush, linkedin: "https://www.linkedin.com/in/ask99ayush/", github: "https://github.com/Ask99Ayush" },
+  { name: "Harshit Singh Patel", role: "Member", image: harshit, linkedin: "https://www.linkedin.com/in/harshit-patel01", github: "https://github.com/Harshit-Patel01" },
+  { name: "Shreya Baranwal", role: "Member", image: shreya, linkedin: "https://www.linkedin.com/in/shreya-baranwal-1103802a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/shreya229508" },
+  { name: "Amrit Seth", role: "Member", image: amrit, linkedin: "https://www.linkedin.com/in/amrit-seth-702520315?", github: "https://github.com/amritseth" },
+  { name: "Rishabh Kumar ", role: "Member", image: rishabh, linkedin: "https://www.linkedin.com/in/rishabh-kumar-a072392aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/Rishabh-kumar45" },
+  { name: "Sugandh Garg ", role: "Member", image: sugandh, linkedin: "https://www.linkedin.com/in/sugandh-garg-14a51b204?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/sugandhgarg03" },
 ];
 
 export default function Members() {
