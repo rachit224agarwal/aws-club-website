@@ -25,4 +25,5 @@ dist-ssr
 
 .DS_Store
 
-.env
+.env.DS_Store
+.DS_Store
