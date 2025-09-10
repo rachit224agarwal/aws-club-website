@@ -46,7 +46,7 @@ export default function Home() {
     return () => clearTimeout(typingTimeout);
   }, [displayedText, isDeleting, currentWordIndex]);
 
-  // Cursor movement effect
+
   useEffect(() => {
     const handleMouseMove = (e) => {
       setCursorPos({ x: e.clientX, y: e.clientY });
@@ -57,13 +57,13 @@ export default function Home() {
 
   return (
     <main className="relative w-full min-h-screen bg-gray-900 text-white overflow-hidden">
-      {/* Neon background effect */}
+
       <div className="absolute inset-0">
         <div className="w-[700px] h-[700px] bg-yellow-500 opacity-20 rounded-full blur-[200px] absolute top-[-200px] left-[-200px] animate-pulse"></div>
         <div className="w-[600px] h-[600px] bg-blue-500 opacity-20 rounded-full blur-[200px] absolute bottom-[-200px] right-[-200px] animate-pulse"></div>
       </div>
 
-      {/* Moving cursor glow */}
+  
       <div
         className="pointer-events-none fixed w-24 h-24 bg-[#FF9900] opacity-20 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2 transition-all duration-100"
         style={{
@@ -72,7 +72,7 @@ export default function Home() {
         }}
       />
 
-      {/* Hero Section */}
+
       <section className="relative flex flex-col items-center justify-center text-center px-4 max-w-7xl mx-auto pt-32">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Welcome to <span className="text-[#FF9900]">AWS Cloud Club</span>
@@ -87,12 +87,12 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Logo Section */}
+
       <section className="relative py-12 flex flex-col justify-center items-center px-6 max-w-7xl mx-auto">
         <img src={awslogo} alt="AWS Logo" className="max-h-28 md:max-h-36" />
       </section>
 
-      {/* Stats Section */}
+      
      <section className="relative py-16 flex flex-col justify-center items-center px-6 max-w-7xl mx-auto">
   <h2 className="text-3xl md:text-4xl font-bold text-[#FF9900] mb-10">
     Our Impact
@@ -118,7 +118,7 @@ export default function Home() {
 </section>
 
 
-      {/* Why Join Us Section */}
+      
       <section className="relative py-16 flex flex-col justify-center items-center px-6 max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-[#FF9900] mb-10">
           Why Join Us?
