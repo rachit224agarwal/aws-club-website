@@ -16,9 +16,10 @@ import ayush from "../assets/people/ayush.jpg";
 import ashutosh from "../assets/people/ashutosh.jpg";
 import shreya from "../assets/people/shreya.jpg";
 import subrat from "../assets/people/subrat.jpg";
-import rishabh from "../assets/people/rishabh.jpg";
+import rishabh from "../assets/people/rishabh.jpeg"
+import harshit from "../assets/people/harshit.jpeg"
 import sugandh from "../assets/people/sugandh.jpg";
-import harshit from "../assets/people/harshit.jpg";
+
 // Core Team Data
 const coreTeam = [
   { name: "Ghanatva Thakaran", role: "Mentor", image: ghanatva, linkedin: "https://www.linkedin.com/in/ghanatava/", github: "https://github.com/ghanatava" },
@@ -38,7 +39,7 @@ const teamMembers = [
   { name: "Harshit Singh Patel", role: "Member", image: harshit, linkedin: "https://www.linkedin.com/in/harshit-patel01", github: "https://github.com/Harshit-Patel01" },
   { name: "Shreya Baranwal", role: "Member", image: shreya, linkedin: "https://www.linkedin.com/in/shreya-baranwal-1103802a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/shreya229508" },
   { name: "Amrit Seth", role: "Member", image: amrit, linkedin: "https://www.linkedin.com/in/amrit-seth-702520315?", github: "https://github.com/amritseth" },
-  { name: "Rishabh Kumar ", role: "Member", image: rishabh, linkedin: "https://www.linkedin.com/in/rishabh-kumar-a072392aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/Rishabh-kumar45" },
+  { name: "Rishabh Kumar ", role: "Member", image:rishabh , linkedin: "https://www.linkedin.com/in/rishabh-kumar-a072392aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/Rishabh-kumar45" },
   { name: "Sugandh Garg ", role: "Member", image: sugandh, linkedin: "https://www.linkedin.com/in/sugandh-garg-14a51b204?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", github: "https://github.com/sugandhgarg03" },
 ];
 
