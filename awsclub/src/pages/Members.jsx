@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import MemberCard from "../components/MemberCard";
 
 // Import images
-import AnkurSir from "../assets/people/Ankur_sir.jpeg"
+import AnkurSir from "../assets/people/Ankur_Sir.jpeg"
 import raunak from "../assets/people/raunak.jpg";
 import p from "../assets/people/p.jpg";
 import kunal from "../assets/people/kunal.jpg";
