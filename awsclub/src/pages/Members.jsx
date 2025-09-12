@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import MemberCard from "../components/MemberCard";
 
 // Import images
-import Ankur_sir from "../assets/people/Ankur_sir.jpeg"
+import AnkurSir from "../assets/people/Ankur_sir.jpeg"
 import raunak from "../assets/people/raunak.jpg";
 import p from "../assets/people/p.jpg";
 import kunal from "../assets/people/kunal.jpg";
@@ -23,7 +23,7 @@ import sugandh from "../assets/people/sugandh.jpg";
 
 // Core Team Data
 const coreTeam = [
-  { name: "Dr. Ankur Bhardwaj ", role: "Faculty Coordinator", image: Ankur_sir, linkedin: "https://www.linkedin.com/in/dr-ankur-bhardwaj-61ba5154/"},
+  { name: "Dr. Ankur Bhardwaj ", role: "Faculty Coordinator", image: AnkurSir, linkedin: "https://www.linkedin.com/in/dr-ankur-bhardwaj-61ba5154/"},
   { name: "Ghanatva Thakaran", role: "Mentor", image: ghanatva, linkedin: "https://www.linkedin.com/in/ghanatava/", github: "https://github.com/ghanatava" },
   { name: "Prapti Sharma", role: "Founder & Mentor", image: prapti, linkedin: "https://www.linkedin.com/in/prapti-sharma-796080257/", github: "https://github.com/praptisharma28" },
   { name: "Kunal Thalautiya", role: "Founder & President", image: kunal, linkedin: "https://www.linkedin.com/in/kunal-thalautiya-238a17242/", github: "https://github.com/Kunalkthalautiya" },
