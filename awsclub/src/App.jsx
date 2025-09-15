@@ -9,13 +9,14 @@ import Projects from "./pages/Projects";
 import Events from "./pages/Events";
 import Members from "./pages/Members";
 import Contact from "./pages/Contact";
+import EventPopup from "./components/EventPopup";
 
 function App() {
   return (
       <div className="bg-[#232F3E] text-white min-h-screen flex flex-col">
         {/* Navbar */}
         <Topbar />
-
+        <EventPopup/>
         {/* Main content */}
         <main className="flex-grow pt-16"> 
           <Routes>
