@@ -27,10 +27,10 @@ const coreTeam = [
   { name: "Ghanatva Thakaran", role: "Mentor", image: ghanatva, linkedin: "https://www.linkedin.com/in/ghanatava/", github: "https://github.com/ghanatava" },
   { name: "Prapti Sharma", role: "Founder & Mentor", image: prapti, linkedin: "https://www.linkedin.com/in/prapti-sharma-796080257/", github: "https://github.com/praptisharma28" },
   { name: "Kunal Thalautiya", role: "Founder & President", image: kunal, linkedin: "https://www.linkedin.com/in/kunal-thalautiya-238a17242/", github: "https://github.com/Kunalkthalautiya" },
-  { name: "Pravira Shukla", role: "Vice President", image: p, linkedin: "https://www.linkedin.com/in/pravirashukla/", github: "https://github.com/pravirashukla" },
-  { name: "Rishi Raman Sinha", role: "Technical Lead", image: rishi, linkedin: "https://www.linkedin.com/in/rishi-raman-sinha-1714742a2/", github: "https://github.com/rishiraman27" },
   { name: "Raunak Kushwaha", role: "Operation Lead", image: raunak, linkedin: "https://www.linkedin.com/in/raunak-kushwaha-1b22372a8/", github: "https://github.com/Raunakushwa" },
+  { name: "Pravira Shukla", role: "Vice President", image: p, linkedin: "https://www.linkedin.com/in/pravirashukla/", github: "https://github.com/pravirashukla" },
   { name: "Rachit Agarwal", role: "Community Manager", image: rachit, linkedin: "https://www.linkedin.com/in/rachit-agarwal-a52924282/", github: "https://github.com/rachit224agarwal" },
+  { name: "Rishi Raman Sinha", role: "Technical Lead", image: rishi, linkedin: "https://www.linkedin.com/in/rishi-raman-sinha-1714742a2/", github: "https://github.com/rishiraman27" },
 ];
 
 // Team Members Data
