@@ -9,7 +9,7 @@ import event6 from "../assets/events/event6.jpg";
 import event7 from "../assets/events/event7.jpg";
 import event8 from "../assets/events/event8.jpg";
 import event9 from "../assets/events/event9.jpg";
-import novaPoster from "../assets/events/nova2.jpg"; // New Poster
+import cloudnova from "../assets/events/cloudnova.jpg"
 
 const previousEvents = [event3, event4, event5, event6, event7, event8, event9, event2, event1];
 
@@ -30,7 +30,7 @@ export default function Events() {
         <div className="flex flex-col md:flex-row items-center md:items-start gap-16 mb-20">
           {/* Poster on the left */}
           <motion.img
-            src={novaPoster}
+            src={cloudnova}
             alt="CloudNova Poster"
             initial={{ opacity: 0.6, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,14 +47,21 @@ export default function Events() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="w-full md:w-1/2 space-y-4"
           >
-            <h3 className="text-3xl font-bold text-[#FF9900]">Level Up with CloudNova: 5-Day Tech Bootcamp</h3>
+            <h3 className="text-5xl md:text-6xl font-extrabold 
+  text-transparent bg-clip-text 
+  bg-gradient-to-r from-[#FF9900] via-yellow-300 to-white 
+  drop-shadow-[0_0_25px_rgba(255,153,0,0.7)] 
+  tracking-widest text-center animate-pulse">
+  Level Up with CloudNova: 3-Day Tech Bootcamp
+</h3>
+
             <p className="text-gray-300">
-              ✨ Come attend <strong>CloudNova Bootcamp</strong> to gain practical knowledge and hands-on experience
+               Come attend <strong>CloudNova Bootcamp</strong> to gain practical knowledge and hands-on experience
               with essential technologies. Don’t miss this chance to level up your skills and stand out in the tech world.
             </p>
 
             <ul className="list-disc list-inside text-gray-300 space-y-1">
-              <li>📅 <strong>Dates:</strong> 22nd – 26th September</li>
+              <li>📅 <strong>Dates:</strong> 23rd – 25th September</li>
               <li>📍 <strong>Venue:</strong> E-Block (Room no- 306)</li>
               <li>⏰ <strong>Time:</strong> 5:00 – 7:00 pm</li>
             </ul>

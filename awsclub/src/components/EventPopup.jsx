@@ -7,7 +7,7 @@ export default function EventPopup() {
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
-    const eventDate = new Date("2025-09-22T00:00:00"); // Event start date
+    const eventDate = new Date("2025-09-23T00:00:00"); // Event start date
 
     const timer = setInterval(() => {
       const now = new Date();
