@@ -79,12 +79,13 @@ export default function Events() {
             </p>
 
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSc3njajyuZgCo0xShsVC8j4x3_vPFIGE8zT_taPRHdAnY22xQ/viewform"
-              target="_blank"
+            //   href="https://docs.google.com/forms/d/e/1FAIpQLSc3njajyuZgCo0xShsVC8j4x3_vPFIGE8zT_taPRHdAnY22xQ/viewform"
+            //   target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 mt-4 bg-[#FF9900] text-black font-semibold rounded-xl shadow-lg hover:bg-yellow-400 transition"
             >
-              Register Now
+            Registrations are now closed.
+
             </a>
           </motion.div>
         </div>
