@@ -56,6 +56,17 @@ export default function Footer() {
           Raunak Kushwaha
         </a>
       </div>
+
+      {/* Team Section */}
+      <div className="border-t border-gray-700 py-6 text-center">
+        <h4 className="text-md font-semibold text-[#FF9900] mb-3">
+          Team AWS Cloud Club KIET
+        </h4>
+        <p className="text-sm text-gray-400">
+          Together we build, learn, and innovate on the cloud
+        </p>
+      </div>
     </footer>
   );
 }
+

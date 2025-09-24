@@ -25,7 +25,7 @@ export default function Events() {
       <section className="relative max-w-7xl mx-auto px-6">
         {/* New Top Poster Section with Description */}
         <h2 className="text-5xl font-extrabold text-[#FF9900] text-center mb-14 tracking-wide drop-shadow-lg">
-          Upcoming Event
+          Ongoing Event
         </h2>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-16 mb-20">
           {/* Poster on the left */}
@@ -78,15 +78,6 @@ export default function Events() {
               📞 <strong>Contact:</strong> Raunak (9169347998), Rachit (9557915111)
             </p>
 
-            <a
-            //   href="https://docs.google.com/forms/d/e/1FAIpQLSc3njajyuZgCo0xShsVC8j4x3_vPFIGE8zT_taPRHdAnY22xQ/viewform"
-            //   target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 mt-4 bg-[#FF9900] text-black font-semibold rounded-xl shadow-lg hover:bg-yellow-400 transition"
-            >
-            Registrations are now closed.
-
-            </a>
           </motion.div>
         </div>
 
