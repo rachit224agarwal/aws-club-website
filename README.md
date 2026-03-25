@@ -42,10 +42,13 @@ Deployment: Vercel <br>
 This project was a team effort ✨. I learned how to collaborate and contribute effectively while building this with my friend:
 
 👨‍💻 Rachit Agarwal – Developer, Maintainer <br>
-🔗 GitHub: [rachit224agarwal](https://github.com/rachit224agarwal) <br><br>
+🔗 GitHub: [rachit224agarwal](https://github.com/rachit224agarwal) <br>
 
 👨‍💻 Raunak Kushwaha – Co-Developer, Contributor, Maintainer <br>
 🔗 GitHub: [Raunak-Kushwaha](https://github.com/Raunakushwa) <br>
+
+👨‍💻 Ayush Rao Chaudhary – Contributor, Maintainer <br>
+🔗 GitHub: [Ask99Ayush](https://github.com/Ask99Ayush) <br>
 
 <h2>📧 Contact</h2>
 
