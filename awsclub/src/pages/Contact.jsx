@@ -110,7 +110,7 @@ export default function Contact() {
   const contactInfo = [
     { icon: MapPin, text: "KIET ( Deemed To Be University )", delay: 0.1, link: "https://maps.app.goo.gl/WT9i7216vyEPM3KP8" },
     { icon: Phone, text: "+91 9557915111", delay: 0.2, link: "tel:+919557915111" },
-    { icon: Mail, text: "awscloudclubkiet@gmail.com", delay: 0.3, link: "mailto:awscloudclubkiet@gmail.com" }
+    { icon: Mail, text: "awscloudclub@kiet.edu", delay: 0.3, link: "mailto:awscloudclub@kiet.edu" }
   ];
 
   // Animated Background Particles
