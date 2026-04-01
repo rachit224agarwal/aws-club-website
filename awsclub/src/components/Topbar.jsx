@@ -1,6 +1,5 @@
-// src/components/Topbar.jsx
 import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronRight, Sparkles, Home, FolderGit2, Calendar, Users, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import clubLogo from "../assets/ClubLogoP.png";
@@ -9,6 +8,7 @@ export default function Topbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +22,21 @@ export default function Topbar() {
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
+
+  // Function to navigate and scroll to top
+  const navigateToTop = (path) => {
+    // If navigating to a different page or same page
+    if (location.pathname === path) {
+      // If already on the page, just scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Navigate to new page and scroll to top
+      navigate(path);
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
+    }
+  };
 
   const navLinks = [
     { path: "/", name: "Home", icon: Home, mobileIcon: "🏠" },
@@ -85,6 +100,19 @@ export default function Topbar() {
     setIsOpen(false);
   };
 
+  // Handle logo click
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -99,7 +127,10 @@ export default function Topbar() {
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3 md:py-4">
         
         {/* Logo + Club Name with Animation */}
-        <NavLink to="/" className="flex items-center gap-3 group">
+        <div 
+          onClick={handleLogoClick}
+          className="flex items-center gap-3 group cursor-pointer"
+        >
           <motion.div 
             variants={logoVariants}
             initial="initial"
@@ -131,44 +162,46 @@ export default function Topbar() {
             </motion.span>
             <span className="block text-[10px] md:text-xs text-gray-400">KIET ( Deemed to be University )</span>
           </div>
-        </NavLink>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-center gap-1 lg:gap-2">
           {navLinks.map((link) => (
-            <NavLink key={link.path} to={link.path} end>
-              {({ isActive }) => (
-                <motion.div
-                  variants={linkVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                  className="relative px-3 lg:px-5 py-2"
-                >
-                  <div className="flex items-center gap-2">
-                    <link.icon 
-                      size={18} 
-                      className={`transition-colors duration-200 ${
-                        isActive ? "text-[#FF9900]" : "text-gray-400"
-                      }`}
-                    />
-                    <span className={`font-medium transition-colors duration-200 ${
-                      isActive ? "text-[#FF9900]" : "text-gray-300"
-                    }`}>
-                      {link.name}
-                    </span>
-                  </div>
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeNav"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#FF9900] to-[#FF6B00]"
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    />
-                  )}
-                </motion.div>
-              )}
-            </NavLink>
+            <div
+              key={link.path}
+              onClick={() => navigateToTop(link.path)}
+              className="cursor-pointer"
+            >
+              <motion.div
+                variants={linkVariants}
+                whileHover="hover"
+                whileTap="tap"
+                className="relative px-3 lg:px-5 py-2"
+              >
+                <div className="flex items-center gap-2">
+                  <link.icon 
+                    size={18} 
+                    className={`transition-colors duration-200 ${
+                      location.pathname === link.path ? "text-[#FF9900]" : "text-gray-400"
+                    }`}
+                  />
+                  <span className={`font-medium transition-colors duration-200 ${
+                    location.pathname === link.path ? "text-[#FF9900]" : "text-gray-300"
+                  }`}>
+                    {link.name}
+                  </span>
+                </div>
+                {location.pathname === link.path && (
+                  <motion.div
+                    layoutId="activeNav"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#FF9900] to-[#FF6B00]"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  />
+                )}
+              </motion.div>
+            </div>
           ))}
         </nav>
 
@@ -242,20 +275,20 @@ export default function Topbar() {
                   whileHover={{ x: 8 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <NavLink
-                    to={link.path}
-                    onClick={() => setIsOpen(false)}
-                    className={({ isActive }) =>
-                      `flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 ${
-                        isActive
-                          ? "bg-gradient-to-r from-[#FF9900]/20 to-[#FF9900]/5 text-[#FF9900] border-l-4 border-[#FF9900]"
-                          : "text-gray-300 hover:bg-gray-800/30 hover:text-[#FF9900]"
-                      }`
-                    }
+                  <div
+                    onClick={() => {
+                      setIsOpen(false);
+                      navigateToTop(link.path);
+                    }}
+                    className={`flex items-center gap-3 py-3 px-4 rounded-xl transition-all duration-200 cursor-pointer ${
+                      location.pathname === link.path
+                        ? "bg-gradient-to-r from-[#FF9900]/20 to-[#FF9900]/5 text-[#FF9900] border-l-4 border-[#FF9900]"
+                        : "text-gray-300 hover:bg-gray-800/30 hover:text-[#FF9900]"
+                    }`}
                   >
                     <span className="text-2xl">{link.mobileIcon}</span>
                     <span className="font-medium text-base">{link.name}</span>
-                  </NavLink>
+                  </div>
                 </motion.div>
               ))}
 
