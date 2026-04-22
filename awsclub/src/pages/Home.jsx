@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import awslogo from "../assets/awslogo.png";
 import Counter from "../components/Counter";
 import VisionObjective from "../components/VisionObjective";
-import visionImage from "../assets/ClubLogoP.png";
+import visionImage from "../assets/ClubLogoP.jpg";
 import { ArrowRight, Users, Code2, Award, Rocket, TrendingUp } from "lucide-react";
 
 // ─── Static data outside component (zero re-allocation) ───────────────────────

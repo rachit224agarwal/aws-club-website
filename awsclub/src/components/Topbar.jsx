@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronRight, Sparkles, Home, FolderGit2, Calendar, Users, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import clubLogo from "../assets/ClubLogoP.png";
+import clubLogo from "../assets/ClubLogoP.jpg";
 
 export default function Topbar() {
   const [isOpen, setIsOpen] = useState(false);
