@@ -1,309 +1,135 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
-import { Code2, Cloud, Rocket, Sparkles, ArrowRight, Github, ExternalLink } from "lucide-react";
+import React from "react";
+import { motion } from "framer-motion";
+import { Infinity as InfinityIcon } from "lucide-react";
+import { projects } from "../data/projects";
+import ProjectCard from "../components/projects/ProjectCard";
+import SpotlightBackground from "../components/layout/SpotlightBackground";
+import PageHero from "../components/ui/PageHero";
+import GlassPanel from "../components/ui/GlassPanel";
+import { fadeUp, ease } from "../utils/animations";
 
 export default function Projects() {
-  const [hoveredCard, setHoveredCard] = useState(null);
-  const { scrollYProgress } = useScroll();
-  const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
-  const scaleX = useTransform(smoothProgress, [0, 1], [0, 1]);
-  
-  const yBg = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const opacityBg = useTransform(scrollYProgress, [0, 0.5], [0.2, 0.1]);
 
-  // Tech stack icons for coming soon section
-  const techStack = [
-    { name: "AWS", icon: "☁️", color: "#FF9900" },
-    { name: "DevOps", icon: "⚙️", color: "#4CAF50" },
-    { name: "Python", icon: "🐍", color: "#3776AB" },
-    { name: "React", icon: "⚛️", color: "#61DAFB" },
-    { name: "Docker", icon: "🐳", color: "#2496ED" },
-    { name: "Kubernetes", icon: "⎈", color: "#326CE5" },
-  ];
-
-  // Animated particles for background
-  const AnimatedParticles = () => {
-    const canvasRef = useRef(null);
-    
-    useEffect(() => {
-      const canvas = canvasRef.current;
-      const ctx = canvas.getContext('2d');
-      let animationFrameId;
-      let particles = [];
-      
-      const resizeCanvas = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        initParticles();
-      };
-      
-      const initParticles = () => {
-        particles = [];
-        const particleCount = Math.min(60, Math.floor(window.innerWidth / 20));
-        for (let i = 0; i < particleCount; i++) {
-          particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            radius: Math.random() * 2 + 1,
-            speedX: (Math.random() - 0.5) * 0.2,
-            speedY: (Math.random() - 0.5) * 0.2,
-            opacity: Math.random() * 0.2,
-          });
-        }
-      };
-      
-      const animate = () => {
-        if (!ctx) return;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        particles.forEach(particle => {
-          particle.x += particle.speedX;
-          particle.y += particle.speedY;
-          
-          if (particle.x < 0) particle.x = canvas.width;
-          if (particle.x > canvas.width) particle.x = 0;
-          if (particle.y < 0) particle.y = canvas.height;
-          if (particle.y > canvas.height) particle.y = 0;
-          
-          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255, 153, 0, ${particle.opacity})`;
-          ctx.fill();
-        });
-        
-        animationFrameId = requestAnimationFrame(animate);
-      };
-      
-      resizeCanvas();
-      animate();
-      
-      window.addEventListener('resize', resizeCanvas);
-      
-      return () => {
-        cancelAnimationFrame(animationFrameId);
-        window.removeEventListener('resize', resizeCanvas);
-      };
-    }, []);
-    
-    return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none opacity-30" />;
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.06, delayChildren: 0.15 }
+    }
   };
 
-  // Floating icons animation
-  const FloatingIcon = ({ icon, delay, x, y }) => {
-    return (
-      <motion.div
-        className="absolute text-3xl md:text-4xl opacity-10 pointer-events-none"
-        style={{ left: `${x}%`, top: `${y}%` }}
-        initial={{ y: 0, rotate: 0 }}
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 10, -10, 0],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          delay: delay,
-          ease: "easeInOut",
-        }}
-      >
-        {icon}
-      </motion.div>
-    );
-  };
+  const floatDelays = [0, 0.2, 0.5, 0.1, 0.6, 0.3];
 
   return (
-    <main className="relative w-full min-h-screen bg-gray-900 text-white overflow-hidden">
-      
-      {/* Scroll Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF9900] via-yellow-500 to-[#FF6B00] z-50 origin-left"
-        style={{ scaleX }}
-      />
-      
-      {/* Animated Background */}
-      <AnimatedParticles />
-      
-      {/* Floating Gradient Orbs with Parallax */}
-      <motion.div 
-        style={{ y: yBg, opacity: opacityBg }}
-        className="absolute inset-0 pointer-events-none"
-      >
-        <div className="w-[700px] h-[700px] bg-gradient-to-r from-orange-500 to-yellow-500 opacity-20 blur-[200px] absolute top-[-250px] left-[-200px] animate-pulse-slow" />
-        <div className="w-[600px] h-[600px] bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 blur-[200px] absolute bottom-[-200px] right-[-200px] animate-pulse-slow animation-delay-2000" />
-        <div className="w-[500px] h-[500px] bg-gradient-to-r from-[#FF9900] to-orange-600 opacity-15 blur-[180px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-float" />
-      </motion.div>
+    <main className="page-wrapper relative overflow-hidden bg-transparent">
+      <SpotlightBackground />
 
-      {/* Floating Tech Icons */}
-      <FloatingIcon icon="☁️" delay={0} x={10} y={20} />
-      <FloatingIcon icon="⚙️" delay={1.5} x={85} y={15} />
-      <FloatingIcon icon="🐍" delay={0.8} x={15} y={70} />
-      <FloatingIcon icon="⚛️" delay={2} x={90} y={80} />
-      <FloatingIcon icon="🐳" delay={1.2} x={5} y={45} />
-      <FloatingIcon icon="⎈" delay={2.5} x={92} y={50} />
-      <FloatingIcon icon="🚀" delay={0.5} x={50} y={10} />
-      <FloatingIcon icon="💻" delay={1.8} x={45} y={85} />
+      <div className="max-w-7xl mx-auto z-10 relative">
+        {/* Page Hero - Built purely using existing content */}
+        <PageHero
+          badge="Community Projects"
+          title="AWS Club Projects"
+          subtitle="Real-world applications built by our members exploring cloud, DevOps, and AI."
+        />
 
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 pointer-events-none opacity-5">
-        <svg className="w-full h-full">
-          <defs>
-            <pattern id="grid-pattern" width="50" height="50" patternUnits="userSpaceOnUse">
-              <path d="M 50 0 L 0 0 0 50" fill="none" stroke="white" strokeWidth="0.8"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid-pattern)" />
-        </svg>
-      </div>
-
-      {/* Main Content */}
-      <div className="relative min-h-screen flex items-center justify-center px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          
-          {/* Branding with Animation */}
+        {projects.length > 0 ? (
           <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 260, damping: 20 }}
-            className="inline-block px-5 py-2 border-2 border-[#FF9900] text-[#FF9900] rounded-full text-sm font-semibold mb-6 tracking-wide backdrop-blur-sm bg-black/30 shadow-lg"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            AWS Cloud Club
-          </motion.div>
-
-          {/* Title with Gradient Animation */}
-          <motion.h1 
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-[#FF9900] to-white bg-clip-text text-transparent bg-[length:200%] animate-shimmer"
-          >
-            Projects
-          </motion.h1>
-
-          {/* Coming Soon Badge with Pulse Animation */}
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
-            className="inline-block mb-8"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-[#FF9900] rounded-full blur-xl opacity-50 animate-ping" />
-              <div className="relative px-5 py-2 bg-gradient-to-r from-[#FF9900]/20 to-[#FF9900]/10 border border-[#FF9900]/40 text-[#FF9900] rounded-full text-sm font-medium backdrop-blur-sm">
-                <span className="flex items-center gap-2">
-                  <Sparkles size={14} className="animate-pulse" />
-                  Coming Soon
-                  <Sparkles size={14} className="animate-pulse" />
-                </span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Description with Staggered Words */}
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="text-gray-300 text-lg md:text-xl mb-6 leading-relaxed max-w-2xl mx-auto"
-          >
-            We are building real-world AWS projects focused on cloud, DevOps, and AI.
-            This section will showcase hands-on work by our community.
-          </motion.p>
-
-          {/* Tech Stack Showcase */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="mb-8"
-          >
-            <p className="text-sm text-gray-400 mb-4">Powered by</p>
-            <div className="flex flex-wrap justify-center gap-3">
-              {techStack.map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.1 + index * 0.05, type: "spring", stiffness: 200 }}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700"
-                >
-                  <span className="text-lg">{tech.icon}</span>
-                  <span className="text-sm text-gray-300">{tech.name}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Future Hint with Animated Arrow */}
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.3, duration: 0.6 }}
-            className="text-sm text-gray-500 flex items-center justify-center gap-2"
-          >
-            Stay tuned — exciting projects and case studies will be published here.
-            <motion.span
-              animate={{ x: [0, 5, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <ArrowRight size={14} />
-            </motion.span>
-          </motion.p>
-
-          {/* Animated Progress Indicator */}
-          <motion.div
-            initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "200px" }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="h-1 bg-gradient-to-r from-[#FF9900] to-transparent mx-auto mt-12 rounded-full"
-          />
-
-          {/* Decorative Elements - FIXED: Merged duplicate animate props */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.8 }}
-            className="flex justify-center gap-2 mt-12"
-          >
-            {[...Array(5)].map((_, i) => (
-              <motion.div
-                key={i}
-                initial={{ scale: 0 }}
-                animate={{
-                  scale: 1,
-                  scaleY: [1, 1.3, 1],
-                  opacity: [0.5, 1, 0.5],
-                }}
-                transition={{
-                  scale: { delay: 2 + i * 0.1, type: "spring" },
-                  scaleY: { duration: 1.5, repeat: Infinity, delay: i * 0.2 },
-                  opacity: { duration: 1.5, repeat: Infinity, delay: i * 0.2 }
-                }}
-                className="w-1.5 h-1.5 rounded-full bg-[#FF9900]"
-              />
+            {projects.map((project) => (
+              <motion.div key={project.id} variants={fadeUp}>
+                <ProjectCard {...project} />
+              </motion.div>
             ))}
           </motion.div>
-        </div>
-      </div>
+        ) : (
+          /* ═══ "Igniting Soon" Sleek Empty State using GlassPanel and exact texture theme ═══ */
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.5, ease }}
+            className="max-w-4xl mx-auto"
+          >
+            <GlassPanel
+              hoverable={true}
+              glowColor="rgba(109, 40, 217, 0.08)"
+              glowPosition="center"
+              className="p-8 md:p-12 text-center"
+            >
+              <div className="relative z-10 text-center flex flex-col items-center">
+                {/* Sleek Emblem */}
+                <div className="relative mb-6 w-16 h-16 flex items-center justify-center">
+                  <motion.div
+                    animate={{ opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-14 h-14 mx-auto rounded-2xl flex items-center justify-center border border-white/[0.08] shadow-lg relative z-10 bg-white/[0.02]"
+                    style={{ backdropFilter: 'blur(12px)' }}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-white/70 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.433 4.433 0 002.771-2.771 4.493 4.493 0 004.305-1.757" />
+                    </svg>
+                  </motion.div>
+                </div>
 
-      {/* Interactive CTA Card (Optional) */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.a
-          href="#"
-          className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700 text-sm text-gray-400 hover:text-[#FF9900] transition-colors"
-          whileHover={{ scale: 1.05, y: -2 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Code2 size={14} />
-          <span>Want to contribute? Join our community</span>
-          <ExternalLink size={12} />
-        </motion.a>
-      </motion.div>
+                <h3 className="text-2xl md:text-3xl font-semibold mb-3 font-heading text-white/90 tracking-wide">
+                  Coming Soon
+                </h3>
+
+                <p className="text-white/60 text-sm md:text-base mt-2 mb-8 leading-relaxed max-w-2xl mx-auto font-body">
+                  We are architecting real-world AWS projects focused on cloud infrastructure, DevOps pipelines, and generative AI. Stay tuned for open-source case studies built by our community.
+                </p>
+
+                {/* Gentle Floating Tech Badges (Original Data Preserved) */}
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={{ visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } } }}
+                  className="flex flex-row justify-center items-center gap-2 md:gap-4 relative z-10 w-full overflow-hidden"
+                >
+                  {[
+                    { name: 'AWS', isAws: true },
+                    { name: 'DevOps', isDevOps: true },
+                    { name: 'Python', icon: 'python' },
+                    { name: 'React', icon: 'react' },
+                    { name: 'Docker', icon: 'docker' },
+                    { name: 'Kubernetes', icon: 'kubernetes' }
+                  ].map((tech, idx) => (
+                    <motion.div
+                      key={idx}
+                      variants={fadeUp}
+                      animate={{ y: [-3, 3, -3] }}
+                      transition={{
+                        y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: floatDelays[idx] }
+                      }}
+                    >
+                      <div className="flex items-center gap-1.5 md:gap-2 px-2 py-1.5 md:px-4 md:py-2 border border-white/[0.05] rounded-xl text-[9px] md:text-[11px] uppercase tracking-wider font-medium text-white/80 bg-white/[0.02] hover:bg-white/[0.1] hover:border-white/20 transition-colors duration-300 cursor-default whitespace-nowrap">
+                        {tech.isAws ? (
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                            alt="AWS"
+                            loading="lazy"
+                            className="h-3 md:h-4 opacity-90 object-contain"
+                            style={{ filter: 'brightness(0) invert(1)' }}
+                          />
+                        ) : tech.isDevOps ? (
+                          <InfinityIcon className="w-3 h-3 md:w-4 md:h-4 opacity-80" />
+                        ) : (
+                          <img src={`https://cdn.simpleicons.org/${tech.icon}/white`} alt={tech.name} loading="lazy" className="w-3 h-3 md:w-4 md:h-4 opacity-80" />
+                        )}
+                        <span>{tech.name}</span>
+                      </div>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </div>
+            </GlassPanel>
+          </motion.div>
+        )}
+      </div>
     </main>
   );
 }
