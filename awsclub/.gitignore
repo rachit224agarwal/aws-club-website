@@ -1,55 +1,53 @@
 # Dependencies
 node_modules/
+/.pnp
+.pnp.js
 
 # Build output
 dist/
 build/
+coverage/
 
-# Environment variables
+# Environment configuration
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# OS files
+# System files
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.pid
+*.seed
+*.pid.lock
+.AppleDouble
+.LSOverride
 
-# IDE / Editor files
+# Editor & IDE settings
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# Vite files
-vite.config.js.timestamp-*
-
-# Cache
+*.tmp.*
+tmp/
+temp/
 .cache/
 *.cache
 
-# Optional: coverage
-coverage/
+# Workspace metadata
+vite.config.js.timestamp-*
 
-# Optional: temporary files
-tmp/
-temp/
-
-# Optional: system files
-*.pid
-*.seed
-*.pid.lock
-
-# Mac system files
-.AppleDouble
-.LSOverride
-
-# Windows system files
-ehthumbs.db
-Desktop.ini
+# Image Optimization Pipeline
+.image-cache.json
+image-manifest.json
+image-conversion-report.md
+image-optimization-summary.json
