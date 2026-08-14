@@ -1,65 +1,87 @@
-<img width="1436" height="692" alt="Screenshot 2025-09-12 at 9 16 54 PM" src="https://github.com/user-attachments/assets/416cd67e-0511-4e29-a510-29b6c4ce9c2e" />🌩️ AWS Cloud Club – Official Website
-<div align="center"> <img src="https://img.shields.io/badge/Framework-React-61DAFB?logo=react&logoColor=white&style=for-the-badge" /> <img src="https://img.shields.io/badge/Styling-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white&style=for-the-badge" /> <img src="https://img.shields.io/badge/Service-Email.js-FFDD00?style=for-the-badge" /> <img src="https://img.shields.io/badge/Hosted%20on-Vercel-black?logo=vercel&style=for-the-badge" /> </div>
-<h2>📌 About the Project</h2>
+<div align="center">
 
-This is the official website of the AWS Cloud Club, built with React + Tailwind CSS.
-The site showcases:
+# AWS Student Builder Group (SBG)
 
-✅ Club introduction, events, and team members <br>
-✅ Interactive design with Framer Motion animations <br>
-✅ Email.js integration for seamless contact forms <br>
-✅ Fully responsive UI <br>
-✅ Deployed on Vercel for global performance
+### KIET Deemed to be University
 
-<h2>✨ Features</h2>
+The official website of the **AWS Student Builder Group (SBG)** at **KIET Deemed to be University**, showcasing our community, leadership team, technical events, workshops, and student-led initiatives while serving as the central platform for community engagement and updates.
 
-🎨 Modern React + Tailwind CSS UI <br>
+**Live Website:** [awscloudclub.live](https://www.awscloudclub.live)
 
-🔄 Smooth animations using Framer Motion <br>
+<br>
 
-📬 Email.js powered contact form (no backend required!) <br>
+<img src="./assets/images/logos/homepage-preview.png" alt="AWS Student Builder Group Website Homepage" width="100%" />
 
-👥 Dedicated Core Team & Members page <br>
+</div>
 
-🌍 Responsive and mobile-friendly design <br>
+---
 
-🚀 Continuous Deployment with Vercel <br>
+## Navigation
 
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Contributors](#contributors)
+- [Contact](#contact)
 
+---
 
-<h2>🛠️ Tech Stack</h2>
+## About
 
-Frontend: React, Tailwind CSS <br>
+The **AWS Student Builder Group (SBG)** website is the official digital platform for the AWS student community at **KIET Deemed to be University**.
 
-Animations: Framer Motion <br>
+It provides students with a centralized platform to:
 
-Email Service: Email.js <br>
+- Explore community initiatives
+- Discover technical workshops and events
+- Meet the leadership and core team
+- Stay updated with announcements
+- Connect with the AWS community
 
-Deployment: Vercel <br>
+---
 
-<h2>🤝 Contributors</h2>
+## Features
 
-This project was a team effort ✨. I learned how to collaborate and contribute effectively while building this with my friend:
+- Modern and responsive user interface
+- Community and leadership showcase
+- Dedicated events and workshops section
+- Interactive animations powered by Framer Motion
+- Optimized performance and accessibility
 
-👨‍💻 Rachit Agarwal – Developer, Maintainer <br>
-🔗 GitHub: [rachit224agarwal](https://github.com/rachit224agarwal) <br>
+---
 
-👨‍💻 Raunak Kushwaha – Co-Developer, Contributor, Maintainer <br>
-🔗 GitHub: [Raunak-Kushwaha](https://github.com/Raunakushwa) <br>
+## Tech Stack
 
-👨‍💻 Ayush Rao Chaudhary – Contributor, Maintainer <br>
-🔗 GitHub: [Ask99Ayush](https://github.com/Ask99Ayush) <br>
+| Category | Technology |
+| :-------- | :--------- |
+| Frontend | React + Vite |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion |
 
-<h2>📧 Contact</h2>
+---
 
-For queries, collaborations, or feedback:
+## Contributors
 
-📩 Email: agarwalrachit224@gmail.com <br>
-🌐 Website: https://www.awscloudclub.live/
+| Name | Role | GitHub |
+| :--- | :--- | :----- |
+| **Rachit Agarwal** | Lead Developer • Maintainer | [@rachit224agarwal](https://github.com/rachit224agarwal) |
+| **Raunak Kushwaha** | Co-Developer • Maintainer | [@Raunakushwa](https://github.com/Raunakushwa) |
+| **Ayush Rao Chaudhary** | Co-Developer • Maintainer | [@Ask99Ayush](https://github.com/Ask99Ayush) |
 
-<h2>⭐ Support</h2>
+---
 
-If you like this project, don’t forget to star the repo ⭐ <br>
-It helps others find the project and motivates us to build more!
+## Contact
 
-<div align="center"> <b>Built with ❤️ by AWS Cloud Club</b> </div>
+| Platform | Details |
+| :------- | :------ |
+| Website | [awscloudclub.live](https://www.awscloudclub.live) |
+| Email | [agarwalrachit224@gmail.com](mailto:agarwalrachit224@gmail.com) |
+
+---
+
+<div align="center">
+
+Developed and maintained by the **AWS Student Builder Group (SBG)**  
+KIET Deemed to be University
+
+</div>
