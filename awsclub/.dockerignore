@@ -1,0 +1,23 @@
+node_modules/
+dist/
+build/
+coverage/
+
+.git/
+.github/
+.husky/
+.vscode/
+.idea/
+
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+
+# Exclude local build caching and pipeline artifacts
+.image-cache.json
+image-conversion-report.md
+image-optimization-summary.json
+*.tmp.*
+*.md
