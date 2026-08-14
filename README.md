@@ -10,7 +10,7 @@ The official website of the **AWS Student Builder Group (SBG)** at **KIET Deemed
 
 <br>
 
-<img src="./assets/images/logos/homepage-preview.png" alt="AWS Student Builder Group Website Homepage" width="100%" />
+<img src="./awsclub/src/assets/images/logos/hompage-preview.png" alt="AWS Student Builder Group Website Homepage" width="100%" />
 
 </div>
 
