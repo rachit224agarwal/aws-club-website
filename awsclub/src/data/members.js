@@ -1,4 +1,4 @@
-﻿// â”€â”€â”€ Founding Leadership â€¢ Faculty / Mentors / 4th Year â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// â”€â”€â”€ Founding Leadership â€¢ Faculty / Mentors / 4th Year â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 import ankur from "../assets/webp/people/Faculty_Coordinator/Ankur_Sir.webp";
 
 import ghanatva from "../assets/webp/people/Mentors/Ghanatva.webp";
@@ -186,17 +186,7 @@ export const executiveTeam = [
     github: "https://github.com/khushigulwani08",
     history: "2026-27",
   },
-  {
-    id: 17,
-    name: "Aditi Narang",
-    role: "Technical Lead",
-    department: "Technical",
-    rank: 3,
-    photoUrl: aditi,
-    linkedin: "https://www.linkedin.com/in/aditiinarang/",
-    github: "https://github.com/AditiiNarang",
-    history: "2026-27",
-  },
+
   {
     id: 19,
     name: "Arnav Gupta",
@@ -270,6 +260,17 @@ export const executiveTeam = [
     history: "2026-27",
   },
 
+  {
+    id: 17,
+    name: "Aditi Narang",
+    role: "Creative Lead",
+    department: "Creative",
+    rank: 3,
+    photoUrl: aditi,
+    linkedin: "https://www.linkedin.com/in/aditiinarang/",
+    github: "https://github.com/AditiiNarang",
+    history: "2026-27",
+  },
   {
     id: 18,
     name: "Muskan Pahwa",
