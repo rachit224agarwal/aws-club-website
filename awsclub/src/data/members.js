@@ -85,7 +85,7 @@ export const foundingLeadership = [
     photoUrl: kunal,
     linkedin: "https://www.linkedin.com/in/kunal-thalautiya-238a17242/",
     github: "https://github.com/Kunalkthalautiya",
-    history: "President",
+    history: "Former President",
   },
   {
     id: 5,
@@ -94,7 +94,7 @@ export const foundingLeadership = [
     photoUrl: pravira,
     linkedin: "https://www.linkedin.com/in/pravirashukla/",
     github: "https://github.com/pravirashukla",
-    history: "Vice President",
+    history: "Former Vice President",
   },
   {
     id: 6,
@@ -103,7 +103,7 @@ export const foundingLeadership = [
     photoUrl: rachit,
     linkedin: "https://www.linkedin.com/in/rachit-agarwal-a52924282/",
     github: "https://github.com/rachit224agarwal",
-    history: "Community Manager",
+    history: "Former Community Manager",
   },
   {
     id: 7,
@@ -112,7 +112,7 @@ export const foundingLeadership = [
     photoUrl: rishi,
     linkedin: "https://www.linkedin.com/in/rishi-raman-sinha-1714742a2/",
     github: "https://github.com/rishiraman27",
-    history: "Technical Lead",
+    history: "Former Technical Lead",
   },
     {
     id: 8,
@@ -121,7 +121,7 @@ export const foundingLeadership = [
     photoUrl: raunak,
     linkedin: "https://www.linkedin.com/in/raunak-kushwaha-1b22372a8/",
     github: "https://github.com/Raunakushwa",
-    history: "Operations Lead",
+    history: "Former Operations Lead",
   },
 ];
 
@@ -519,4 +519,4 @@ export const associateTeam = [
     history: "",
   },
 ];
-
+
