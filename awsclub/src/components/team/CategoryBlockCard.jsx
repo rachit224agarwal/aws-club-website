@@ -153,33 +153,30 @@ export default function CategoryBlockCard({ group, onSelect, isExecutive }) {
                 </div>
               </div>
 
-              <div className="mt-2 text-center flex flex-col items-center w-full">
+              <div className="mt-2 text-center flex flex-col items-center w-full gap-2">
                 <span className={`text-zinc-300 group-hover/avatar:text-white font-sans font-medium sm:font-semibold leading-tight tracking-wide truncate w-full transition-colors duration-300 ${count === 5 ? "text-[10px] sm:text-[11px]" : "text-[11px] sm:text-[13px]"}`}>
                   {firstName}
                 </span>
+                {isLeadership && (
+                  <div className="inline-flex items-center justify-center px-3 py-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-md shadow-sm transition-all duration-300 group-hover/avatar:border-[#A26DFF]/60 group-hover/avatar:shadow-[0_0_14px_rgba(162,109,255,0.3)]">
+                    <span className="text-white/95 group-hover/avatar:text-white font-extrabold text-[9px] sm:text-[10px] uppercase tracking-[0.18em] leading-none whitespace-nowrap transition-colors duration-300">
+                      {m.shortRole || m.role}
+                    </span>
+                  </div>
+                )}
               </div>
             </motion.div>
           );
         })}
       </div>
 
-      {isExecutive && (
-        <div className="w-full flex justify-center gap-3 sm:gap-4 mt-4 sm:mt-5 mb-2 relative z-10 flex-wrap">
-          {isLeadership ? (
-            members.map((m) => (
-              <div key={m.id || m.role} className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-md shadow-sm group-hover:border-[#A26DFF]/60 group-hover:shadow-[0_0_20px_rgba(162,109,255,0.25)] group-hover:-translate-y-0.5 transition-all duration-300">
-                <span className="text-white/95 group-hover:text-white font-extrabold text-[10px] sm:text-[11px] uppercase tracking-[0.2em] leading-none transition-colors duration-300">
-                  {m.role}
-                </span>
-              </div>
-            ))
-          ) : (
-            <div className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-md shadow-sm group-hover:border-[#A26DFF]/60 group-hover:shadow-[0_0_20px_rgba(162,109,255,0.25)] group-hover:-translate-y-0.5 transition-all duration-300">
-              <span className="text-white/95 group-hover:text-white font-extrabold text-[10px] sm:text-[11px] uppercase tracking-[0.2em] leading-none transition-colors duration-300">
-                {title}
-              </span>
-            </div>
-          )}
+      {isExecutive && !isLeadership && (
+        <div className="w-full flex justify-center mt-4 sm:mt-5 mb-2 relative z-10">
+          <div className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-md shadow-sm group-hover:border-[#A26DFF]/60 group-hover:shadow-[0_0_20px_rgba(162,109,255,0.25)] group-hover:-translate-y-0.5 transition-all duration-300">
+            <span className="text-white/95 group-hover:text-white font-extrabold text-[10px] sm:text-[11px] uppercase tracking-[0.2em] leading-none transition-colors duration-300">
+              {title}
+            </span>
+          </div>
         </div>
       )}
 

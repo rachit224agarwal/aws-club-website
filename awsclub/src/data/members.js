@@ -131,6 +131,18 @@ export const foundingLeadership = [
 export const executiveTeam = [
   // â”€â”€â”€ Leadership â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
+    id: 50,
+    name: "Kishika Singh",
+    role: "AWS Student Builder Group Leader",
+    shortRole: "AWS SBGL",
+    department: "Leadership",
+    rank: 0,
+    photoUrl: kishika,
+    linkedin: "https://www.linkedin.com/in/kishikasingh/",
+    github: "https://github.com/KishikaSingh",
+    history: "2026-27",
+  },
+  {
     id: 11,
     name: "Ayush Rao Chaudhary",
     role: "President",
